@@ -1,0 +1,12 @@
+from django.urls import path
+from . import views
+
+app_name = 'todolist'
+urlpatterns = [
+    path('home/', views.home, name='主页'),
+    path('about/', views.about, name='关于'),
+    path('edit/', views.edit, name='编辑'),
+    path('delete/<每一件事_id>', views.delete, name='删除'),
+    path('cross/<每一件事_id>', views.cross, name='划掉'),
+    path('newedit/<每一件事_id>', views.newedit, name='新编辑'),
+]
